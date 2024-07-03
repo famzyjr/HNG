@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Tech Goals For The next Two Years</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav>
+     <div class="goal-nav" >
+       <h1  data-testid="goal-heading">My Two Years tech Goals</h1>
+     </div>
+     <ul id="menuList" >
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+     </ul>
+     <div class="menu-icon" >
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+     </div>
+    </nav>
+    <section class="home">
+     <div class="home-con">
+        <h1 class="home-header">My Two Years tech Goals</h1>
+        <p class="home-para">Discover my ambitious plans to grow in the tech industry over the next 2 years.</p>
+     </div>
+    </section>
+     <section class="goals">
+        <h2 class="goals-header">My Two-Year Goals</h2>
+        <div>
+        <div class="container">
+           <div class="con-1">
+            <i class="fa-solid fa-code"></i>  <h1 class="con-header">Become a fullstack developer</h1>
+            <p class="con-para">Expand my skills in both front-end and back-end development, mastering popular frameworks and technologies on both sides of the stack</p>
+           </div>
+           <div class="con-1">
+            <i class="fa-solid fa-rocket"></i> <h1 class="con-header">Contribute to Open-Source Projects</h1>
+            <p class="con-para"> Actively participate in open-source communities, contributing code, documentation, and bug fixes to projects that align with my interests and skills.</p>
+           </div>
+           <div class="con-1">
+            <i class="fa-solid fa-suitcase"></i> <h1 class="con-header">Secure a Senior Developer Role</h1>
+            <p class="con-para">Continuously improve my skills, take on more challenging projects, and demonstrate my leadership abilities to progress into a senior developer position.</p>
+           </div>
+        </div>
+        </div>
+     </section>
+
+     <section class="plan">
+        <h2 class="plan-header">My Action Plan</h2>
+        <div>
+        <div class="container">
+           <div class="con-2">
+            <i class="fa-solid fa-calendar-days"></i><h1 class="con-header">Timeline</h1>
+            <p class="con-para2">I've created a detailed timeline to track my progress and ensure I stay on track to achieve my goals within the 2-year timeframe.</p>
+           </div>
+           <div class="con-2">
+            <i class="fa-solid fa-check"></i>  <h1 class="con-header">Milestones</h1>
+            <p class="con-para2">I've identified key milestones along the way to measure my progress and celebrate small wins as I work towards my larger goals.</p>
+           </div>
+           <div class="con-2">
+            <i class="fa-solid fa-cloud"></i> <h1 class="con-header">Mentorship</h1>
+            <p class="con-para2">I've sought out experienced developers and industry leaders to serve as mentors, providing guidance, feedback, and support throughout my journey.</p>
+           </div>
+        </div>
+        </div>
+     </section>
+    
+     <section class="profile">
+      <img class="ProfilePicture" data-testid="slackProfilePicture" src="image.png" alt="">
+      <div class="profile-details">
+         <h2 class="profile-name" data-testid="slackDisplayName">Famuyiwa Ahmed</h2>
+         <h2 class="profile-email" data-testid="slackDisplayEmail">famuyiwaahmed132@gmail.com</h2>
+          <div>
+            <p>current-time</p>
+            <h2 id="current-time" data-testid="slackDisplayTime"></h2>
+          </div>
+            <div>
+               <p>current-date</p>
+               <h2 id="date-today" data-testid="slackDisplayDate"></h2>
+            </div>
+      </div>
+       <div class="links">
+         <p><a href="http://hng.tech/learn"data-testid="hngLink" >HNG learn</a></p>
+         <p><a href="http://keyword.dog/" data-testid="keywordLink">Keyword</a></p>
+         <p><a href="http://scrapeanyweb.site/" data-testid="scrapeanywebLink">scrapeanyweb</a></p>
+       </div>
+      <div>
+        
+
+      </div>
+     </section>
+
+
+    <script>
+    let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight ="0px";
+     
+    function toggleMenu(){
+        if(menuList.style.maxHeight == "0px"){
+            menuList.style.maxHeight = "300px";
+        }
+        else{
+            menuList.style.maxHeight ="0px";
+        }
+    }
+
+    let time = document.getElementById("current-time")
+
+     setInterval(()=>{
+      let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+     },1000)
+     
+     let dateToday = document.getElementById("date-today");
+
+    let today = new Date(); 
+    let day = `${today.getDate() < 10 ? "0" : ""} ${today.getDate()}`;
+   //  month are counted from 0
+    let month = `${(today.getMonth( + 1)) < 10 ? "0" : ""}${today.getMonth() + 1}`;
+    let year = today.getFullYear();
+    dateToday.textContent = `${day}/${month}/${year}`;
+    console.log(year);
+    </script>
+    <script src="https://kit.fontawesome.com/81b64f425c.js" crossorigin="anonymous"></script>
+</body>
+</html>
