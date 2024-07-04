@@ -1,100 +1,111 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   font-family:sans-serif;
+    font-family: sans-serif;
+
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
-    
+
 }
 
-nav{
+nav {
     padding: 10px 30px;
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     position: relative;
     height: 70px;
     text-align: center;
 }
-.goal-nav{
+
+.goal-nav {
     color: black;
 }
-nav ul{
+
+nav ul {
     display: flex;
     gap: 30px;
 }
 
-nav ul li{
-    list-style-type: none ;
+nav ul li {
+    list-style-type: none;
 }
 
-nav ul li a{
-text-decoration: none;
-color: #fff;
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
 }
-.menu-icon{
+
+.menu-icon {
     display: none;
 }
 
-.menu-icon i{
-color: #fff;
-font-size: 30px;
+.menu-icon i {
+    color: #fff;
+    font-size: 30px;
 }
 
-.home{
+.home {
     background-color: #2C9652;
     height: 500px;
     margin-top: -40px;
     color: white;
 }
 
-.home-con{
+.home-con {
     padding-top: 50px;
 }
 
-.home h1{
+.home h1 {
     text-align: center;
     padding-top: 100px;
     font-size: 3em;
 }
-.home-para{
+
+.home-para {
     text-align: center;
     font-size: 20px;
 }
 
 
-.goals-header, .plan-header{
-text-align: center;
-text-decoration: underline;
-}
-.container{
-display: flex;
-justify-content: center;
-gap: 20px;
+.goals-header,
+.plan-header {
+    text-align: center;
+    text-decoration: underline;
 }
 
-.con-1, .con-2{
-border: 1px solid black;
-width: 320px;
-height: 300px;
-margin-top: 20px;
-border-radius: 15px;
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.con-2{
+.con-1,
+.con-2 {
+    border: 1px solid black;
+    width: 320px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.con-2 {
     height: 250px;
 }
 
-.plan{
+.plan {
     margin-top: 100px;
 }
-.con-1 i, .con-2 i{
+
+.con-1 i,
+.con-2 i {
     color: #2C9652;
     font-size: 2em;
     display: flex;
@@ -106,34 +117,29 @@ border-radius: 15px;
     text-align: center;
 }
 
-.con-para{
+.con-para {
     font-size: 20px;
     text-align: center;
     margin-top: 30px;
 }
 
-.con-para2{
-   font-size: 20px;
-   text-align: center;
-   margin-top: 20px;
+.con-para2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
-.profile{
+
+.profile {
     background-color: #2C9652;
     margin-top: 30px;
-    height: 690px;
 }
 
-img{
-width: 200px;
-border-radius: 50%;
-/* position: relative; */
-/* left: 640px; */
-margin-left: 640px;
-height: 200px;
-margin-top: 50px;
+img {
+    margin-left: 500px;
+    margin-top: 20px;
 }
 
-.profile-details{
+.profile-details {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -141,118 +147,126 @@ margin-top: 50px;
 }
 
 .profile p {
-font-size: 20px;
+    font-size: 20px;
 }
 
-.links{
+.links {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-p a{
+p a {
     color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
-p a:hover{
+p a:hover {
     text-decoration: underline;
 }
 
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        position: relative;
+        right: 90px;
+    }
 
-@media (max-width:767px){
+    img {
+        position: relative;
+        right: 80px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        position: relative;
+        right: 160px;
+    }
+
+    img {
+        position: relative;
+        right: 50px;
+        width: 300px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        padding-left: 210px;
+    }
+    img {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     body{
+        /* overflow-x: hidden; */
+    }
+    .container {
+    }
+    /* img {
+    margin-left: 300px;
+    } */
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 801px) {
+    .con-1 {
+        height: 340px;
+    }
+    .con-2 {
+        height: 300px;
+    }
+
+    img{
+    /* margin-left: 130px; */
+    }
+}
+
+
+@media (max-width:767px) {
+    body {
         overflow-x: hidden;
     }
-    nav ul{
+
+    nav ul {
         position: absolute;
         top: 70px;
         left: 0;
         right: 0;
         flex-direction: column;
         text-align: center;
-        background:antiquewhite;
+        background: antiquewhite;
         gap: 0;
         overflow: hidden;
     }
-    nav ul li{
+
+    nav ul li {
         padding: 20px;
     }
-    .menu-icon{
+
+    .menu-icon {
         display: block;
     }
-   #menuList{
-    transition: all 0.5s;
-   }
-}
 
-/* Medium devices (tablets, 640px and up) */
-@media only screen and (max-width: 700px) { 
- .container{
-  display: flex;
-  flex-direction: column;
-  margin-left: 150px;
- }
- 
- 
- }
-
- @media only screen and (max-width: 600px) { 
-    h1{
-        margin-right: 10px;
-       } 
-    
-       .container{
-        flex-direction: column;
-        margin-left: 40px;
-       }
-       
-       .con-para,.con-para2{
-        line-height: 25px;
-        font-size: 17px;
-       }
-    
-       .con-para2{
-        margin-top: 25px;
-        
-       }
-       
-  img{
-    position: relative;
-    right: 290px;
-  }
-}   
-
-/* Large devices (desktops, 1024px and up) */
-@media only screen and (max-width: 1024px) { 
-    .ProfilePicture{
-        margin-left: 400px;
+    #menuList {
+        transition: all 0.5s;
     }
-}
-   
- 
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) { 
-.container{
-
-}
-img{
-    margin-left: 470px;
-}
- }
-
-/* XXLarge devices (larger desktops, 1440px and up) */
-@media only screen and (max-width: 1440px) { 
-
-
-}
-
-@media  (min-width:600px) {
-   .container{
-    margin-left: 100px;
-    
-   }
 }
